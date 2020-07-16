@@ -1,6 +1,5 @@
 # GameMaker Dialogue System
 
-debate
 ### Features: 
 * Response trees
 * Inline images

@@ -241,6 +241,7 @@ enum dd_effect { // These are all the built in effects that you can add to the t
 	intro_wind_in, // go round in a circle before finding its place
 	intro_chromatic_aberration, // 
 	
+	// All these look best with style_speed = 0
 	block_1s, // block that all gets displayed at the same time and then waits for x seconds
 	block_2s, // 2 seconds
 	block_3s, // 3 seconds

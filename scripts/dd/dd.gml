@@ -306,8 +306,7 @@ function dd_draw_text(
 						case dd_effect.rainbow_animated_word:
 
 							effects_data[i] += 0.2
-
-							draw_set_colour(rainbow_colour_palette_long[rainbow_colour+floor(effects_data[i]) mod array_length(rainbow_colour_palette_long)])
+							draw_set_colour(rainbow_colour_palette_long[(rainbow_colour+floor(effects_data[i])) mod array_length(rainbow_colour_palette_long)])
 						break;
 						case dd_effect.rotate_smooth:
 							// data step: 
@@ -334,7 +333,7 @@ function dd_draw_text(
 							effects_data[i] ++
 							if (effects_data[i] > beat_frames) {effects_data[i] = 0}
 
-							var scale_to_use = e(ease.beat1,effects_data[i],beat_frames)
+							var scale_to_use = ee(ease.beat1,effects_data[i],beat_frames)
 							effect_scale_x = 0.9 + (scale_to_use*0.2)
 							effect_scale_y = effect_scale_x
 							effect_y = +1 - (scale_to_use*5)
@@ -346,7 +345,7 @@ function dd_draw_text(
 							effects_data[i] ++
 							if (effects_data[i] > beat_frames) {effects_data[i] = 0}
 
-							var scale_to_use = e(ease.beat2,effects_data[i],beat_frames)
+							var scale_to_use = ee(ease.beat2,effects_data[i],beat_frames)
 							effect_scale_x = 0.95 + (scale_to_use*0.13)
 							effect_scale_y = effect_scale_x
 							effect_y = 1-(scale_to_use*3)
@@ -372,7 +371,7 @@ function dd_draw_text(
 								effects_data[i] = 0
 							}
 
-							effect_y = -2-(e2(ease.inCirc,ease.outBounce,effects_data[i],frames_for_animation,0.65,true)*4)
+							effect_y = -2-(ee2(ease.inCirc,ease.outBounce,effects_data[i],frames_for_animation,0.65,true)*4)
 						break;
 						case dd_effect.mexican_wave_word:
 						case dd_effect.mexican_wave_letter:
@@ -384,7 +383,7 @@ function dd_draw_text(
 								effects_data[i] = 0
 							}
 
-							effect_y = (e2(ease.outCirc,ease.outQuad,effects_data[i],frames_for_animation,0.9,true)*3)-3
+							effect_y = (ee2(ease.outCirc,ease.outQuad,effects_data[i],frames_for_animation,0.9,true)*3)-3
 						break;
 						case dd_effect.mexican_wave_scale:
 							// data step
@@ -395,7 +394,7 @@ function dd_draw_text(
 								effects_data[i] = 0
 							}
 
-							effect_scale_x = 1+(0.25-(e2(ease.outCirc,ease.outQuad,effects_data[i],frames_for_animation,0.8,true)*0.25))
+							effect_scale_x = 1+(0.25-(ee2(ease.outCirc,ease.outQuad,effects_data[i],frames_for_animation,0.8,true)*0.25))
 							effect_scale_y = effect_scale_x
 							effect_y = -1
 						break;
@@ -408,7 +407,7 @@ function dd_draw_text(
 								effects_data[i] = 0
 							}
 
-							draw_set_alpha(e2(ease.outCirc,ease.outQuad,effects_data[i],frames_for_animation,0.8,true))
+							draw_set_alpha(ee2(ease.outCirc,ease.outQuad,effects_data[i],frames_for_animation,0.8,true))
 	
 						break;
 						case dd_effect.stroke1:
@@ -538,14 +537,14 @@ function dd_draw_text(
 								effects_data[i] = 0
 							}
 						
-							effect_scale_x = 1 + (e(ease.heartbeat,effects_data[i],frames_for_animation)*0.2)
+							effect_scale_x = 1 + (ee(ease.heartbeat,effects_data[i],frames_for_animation)*0.2)
 							effect_scale_y = effect_scale_x
 if (i == 105) {
 
 //show_debug_message("sss")
 //show_debug_message(effects_data[i])
 //show_debug_message(frames_for_animation)
-//show_debug_message(e(ease.heartbeat,effects_data[i],frames_for_animation))
+//show_debug_message(ee(ease.heartbeat,effects_data[i],frames_for_animation))
 
 }
 						break;
@@ -558,7 +557,7 @@ if (i == 105) {
 								effects_data[i] = 0
 							}
 						
-							draw_set_alpha(1-e(ease.heartbeat,effects_data[i],frames_for_animation))
+							draw_set_alpha(1-ee(ease.heartbeat,effects_data[i],frames_for_animation))
 
 						break;
 						case dd_effect.flicker_alpha:
@@ -569,7 +568,7 @@ if (i == 105) {
 								effects_data[i] = 0
 							}
 						
-							draw_set_alpha(e2(ease.on,ease.flicker1,effects_data[i],frames_for_animation,0.6,false))
+							draw_set_alpha(ee2(ease.on,ease.flicker1,effects_data[i],frames_for_animation,0.6,false))
 						break;
 						case dd_effect.flicker_alpha_constant:
 							effects_data[i] ++
@@ -579,7 +578,7 @@ if (i == 105) {
 								effects_data[i] = 0
 							}
 						
-							draw_set_alpha(e(ease.flicker2,effects_data[i],frames_for_animation))
+							draw_set_alpha(ee(ease.flicker2,effects_data[i],frames_for_animation))
 						break;
 						case dd_effect.intro_alpha_slow:
 							if (effects_data[i] < 1) {
@@ -655,7 +654,7 @@ if (i == 105) {
 								}
 							}
 
-							effect_y = -11+(e(ease.inCirc,effects_data[i],1)*11)
+							effect_y = -11+(ee(ease.inCirc,effects_data[i],1)*11)
 						break;
 						case dd_effect.intro_slide_right:
 							if (effects_data[i] < 1) {
@@ -665,7 +664,7 @@ if (i == 105) {
 								}
 							}
 
-							effect_x = 50-(e(ease.outCirc,effects_data[i],1)*50)
+							effect_x = 50-(ee(ease.outCirc,effects_data[i],1)*50)
 						break;
 						case dd_effect.intro_black_to_grey:
 							if (effects_data[i] < 120) {
@@ -744,62 +743,35 @@ if (i == 105) {
 							draw_set_colour(style_colour[current_draw_style])
 
 						break;
-						case dd_effect.block_1s: // bring in a block all at once and then add a delay 
-							if (effects_data[i] <= 0) {
-								frame = 60
-								effects_data[i] = 1
-							}
-						break;
-						case dd_effect.block_2s: // bring in a block all at once and then add a delay 
-							if (effects_data[i] <= 0) {
-								frame = 120
-								effects_data[i] = 1
-							}
-						break;
-						case dd_effect.block_3s: // bring in a block all at once and then add a delay 
-							if (effects_data[i] <= 0) {
-								frame = 180
-								effects_data[i] = 1
-							}
-						break;
-						case dd_effect.block_4s: // bring in a block all at once and then add a delay 
-							if (effects_data[i] <= 0) {
-								frame = 240
-								effects_data[i] = 1
-							}
-						break;
 						case dd_effect.intro_fadein_thendull_1s:
 							var fade_frames_in = 60
 							var fade_frames_out = 90
 							var fade_frames_wait = 60
 							
-							if (effects_data[i] <= 0) {frame = fade_frames_wait + fade_frames_in} // this just make the delay correct for this block 
-							
 							effects_data[i] ++
 							if (effects_data[i] < fade_frames_in) { // fade in 
-								draw_set_alpha(e(ease.linear,effects_data[i],fade_frames_in))
+								draw_set_alpha(ee(ease.linear,effects_data[i],fade_frames_in))
 							} else if (effects_data[i] < fade_frames_in + fade_frames_wait) { // full opaque 
 								draw_set_alpha(1)
 							} else if (effects_data[i] < fade_frames_in + fade_frames_wait + fade_frames_out) {
-								draw_set_alpha(1-(e(ease.linear,effects_data[i]-(fade_frames_in + fade_frames_wait),fade_frames_out)*0.7))
+								draw_set_alpha(1-(ee(ease.linear,effects_data[i]-(fade_frames_in + fade_frames_wait),fade_frames_out)*0.7))
 							} else {
 								draw_set_alpha(0.3)
 							}
 						break;
 						case dd_effect.intro_fadein_thendull_2s:
+
 							var fade_frames_in = 60
 							var fade_frames_out = 90
 							var fade_frames_wait = 120
 							
-							if (effects_data[i] <= 0) {frame = fade_frames_wait + fade_frames_in} // this just make the delay correct for this block 
-							
 							effects_data[i] ++
 							if (effects_data[i] < fade_frames_in) { // fade in 
-								draw_set_alpha(e(ease.linear,effects_data[i],fade_frames_in))
+								draw_set_alpha(ee(ease.linear,effects_data[i],fade_frames_in))
 							} else if (effects_data[i] < fade_frames_in + fade_frames_wait) { // full opaque 
 								draw_set_alpha(1)
 							} else if (effects_data[i] < fade_frames_in + fade_frames_wait + fade_frames_out) {
-								draw_set_alpha(1-(e(ease.linear,effects_data[i]-(fade_frames_in + fade_frames_wait),fade_frames_out)*0.7))
+								draw_set_alpha(1-(ee(ease.linear,effects_data[i]-(fade_frames_in + fade_frames_wait),fade_frames_out)*0.7))
 							} else {
 								draw_set_alpha(0.3)
 							}
@@ -808,16 +780,14 @@ if (i == 105) {
 							var fade_frames_in = 60
 							var fade_frames_out = 90
 							var fade_frames_wait = 180
-							
-							if (effects_data[i] <= 0) {frame = fade_frames_wait + fade_frames_in} // this just make the delay correct for this block 
-							
+
 							effects_data[i] ++
 							if (effects_data[i] < fade_frames_in) { // fade in 
-								draw_set_alpha(e(ease.linear,effects_data[i],fade_frames_in))
+								draw_set_alpha(ee(ease.linear,effects_data[i],fade_frames_in))
 							} else if (effects_data[i] < fade_frames_in + fade_frames_wait) { // full opaque 
 								draw_set_alpha(1)
 							} else if (effects_data[i] < fade_frames_in + fade_frames_wait + fade_frames_out) {
-								draw_set_alpha(1-(e(ease.linear,effects_data[i]-(fade_frames_in + fade_frames_wait),fade_frames_out)*0.7))
+								draw_set_alpha(1-(ee(ease.linear,effects_data[i]-(fade_frames_in + fade_frames_wait),fade_frames_out)*0.7))
 							} else {
 								draw_set_alpha(0.3)
 							}

@@ -172,6 +172,84 @@ if (display == 2) {
 			frame += frames_per_character_temp
 		}
 		
+		
+		#region some styles change the text speed 
+		
+			
+			// these styles want to change the frame so it cant be done in step 
+			switch (style_current) {
+				case dd_effect.block_1s: // bring in a block all at once and then add a delay 
+					if (effects_data[block_number] <= 0) {
+						show_debug_message(string_char_at(dd_text[dd_to_display],character_along+1))
+						if (string_char_at(dd_text[dd_to_display],character_along+1) == markup_character_start) { // end of block (next character is markup)
+							frame = 60
+							effects_data[block_number] = 1
+						}
+					}
+				break;
+				case dd_effect.block_2s: // bring in a block all at once and then add a delay 
+					if (effects_data[block_number] <= 0) {
+						if (string_char_at(dd_text[dd_to_display],character_along+1) == markup_character_start) { // end of block (next character is markup)
+							frame = 120
+							effects_data[block_number] = 1
+						}
+					}
+				break;
+				case dd_effect.block_3s: // bring in a block all at once and then add a delay 
+					if (effects_data[block_number] <= 0) {
+						if (string_char_at(dd_text[dd_to_display],character_along+1) == markup_character_start) { // end of block (next character is markup)
+							frame = 180
+							effects_data[block_number] = 1
+						}
+					}
+				break;
+				case dd_effect.block_4s: // bring in a block all at once and then add a delay 
+					if (effects_data[block_number] <= 0) {
+						if (string_char_at(dd_text[dd_to_display],character_along+1) == markup_character_start) { // end of block (next character is markup)
+							frame = 240
+							effects_data[block_number] = 1
+						}
+					}
+				break;
+				case dd_effect.intro_fadein_thendull_1s:
+					var fade_frames_in = 60
+					var fade_frames_out = 90
+					var fade_frames_wait = 60
+					if (effects_data[block_number] <= 0) {  // this just make the delay correct for this block 
+						if (string_char_at(dd_text[dd_to_display],character_along+1) == markup_character_start) { // end of block (next character is markup)
+							frame = fade_frames_wait + fade_frames_in
+							//effects_data[block_number] = 1 this happens in the draw
+						}
+					}
+				break;
+				case dd_effect.intro_fadein_thendull_2s:
+					var fade_frames_in = 60
+					var fade_frames_out = 90
+					var fade_frames_wait = 120
+					if (effects_data[block_number] <= 0) {  // this just make the delay correct for this block 
+						if (string_char_at(dd_text[dd_to_display],character_along+1) == markup_character_start) { // end of block (next character is markup)
+							frame = fade_frames_wait + fade_frames_in
+							//effects_data[block_number] = 1 this happens in the draw
+						}
+					}						   
+				break;
+				case dd_effect.intro_fadein_thendull_3s:
+					var fade_frames_in = 60
+					var fade_frames_out = 90
+					var fade_frames_wait = 180
+					if (effects_data[block_number] <= 0) {  // this just make the delay correct for this block 
+						if (string_char_at(dd_text[dd_to_display],character_along+1) == markup_character_start) { // end of block (next character is markup)
+							frame = fade_frames_wait + fade_frames_in
+							//effects_data[block_number] = 1 this happens in the draw
+						}
+					}
+				break;
+
+			}
+		#endregion
+		
+		
+		
 		if (add_character == true) { // to stop the markup character from being added
 			data_maintext_text[block_number] += new_character_to_add
 			// find the width of this character 

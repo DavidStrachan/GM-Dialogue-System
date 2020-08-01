@@ -47,7 +47,7 @@ if (display == 2) { // draw the dialogue
 	}
 
 } else if (display == 1) { // animate in
-	var ease_amount = e(ease.outBack,animate_in_frame,animate_in_frames)
+	var ease_amount = ee(ease.outBack,animate_in_frame,animate_in_frames)
 	
 	draw_sprite_ext(spr_dialogue_bg,0,pos_background_x,pos_background_y,ease_amount,ease_amount,0,c_white,ease_amount)
 	if (dd_image_left[dd_to_display] != -1) {  
@@ -57,7 +57,7 @@ if (display == 2) { // draw the dialogue
 		draw_sprite_ext(dd_image_right[dd_to_display],0,pos_image_right_x,pos_image_right_y,ease_amount*-1,ease_amount,0,c_white,ease_amount)
 	}
 } else if (display == 3) { // animate out
-	var ease_amount = 1-e(ease.outCirc,animate_out_frame,animate_out_frames)
+	var ease_amount = 1-ee(ease.outCirc,animate_out_frame,animate_out_frames)
 	
 	draw_sprite_ext(spr_dialogue_bg,0,pos_background_x,pos_background_y,ease_amount,ease_amount,0,c_white,ease_amount)
 	if (dd_image_left[dd_to_display] != -1) {

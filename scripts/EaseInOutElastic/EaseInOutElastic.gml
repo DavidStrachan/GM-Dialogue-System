@@ -4,8 +4,7 @@
 /// @param outputmin
 /// @param outputmax
 /// @param inputmax
-
-function EaseInOutElastic() {
+function EaseInOutElastic(argument0, argument1, argument2, argument3) {
 
 	var _s = 1.70158;
 	var _p = 0;
@@ -44,6 +43,9 @@ function EaseInOutElastic() {
 	}
 
 	return _a * power(2, -10 * (--argument0)) * sin((argument0 * argument3 - _s) * (2 * pi) / _p) * 0.5 + argument2 + argument1;
+
+
+
 
 
 }

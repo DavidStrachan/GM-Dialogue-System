@@ -4,8 +4,7 @@
 /// @param outputmin
 /// @param outputmax
 /// @param inputmax
-
-function EaseInOutQuint() {
+function EaseInOutQuint(argument0, argument1, argument2, argument3) {
 
 	argument0 /= argument3 * 0.5;
 
@@ -15,5 +14,9 @@ function EaseInOutQuint() {
 	}
 
 	return argument2 * 0.5 * (power(argument0 - 2, 5) + 2) + argument1;
+
+
+
+
 
 }

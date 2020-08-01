@@ -4,10 +4,13 @@
 /// @param outputmin
 /// @param outputmax
 /// @param inputmax
+function EaseWaveSaw3(argument0, argument1, argument2, argument3) {
 
-function EaseWaveSaw3() {
 
 	return (argument2 * (argument0*6) / argument3 + argument1) mod argument2;
 
-}
 
+
+
+
+}

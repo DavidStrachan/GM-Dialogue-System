@@ -4,8 +4,7 @@
 /// @param outputmin
 /// @param outputmax
 /// @param inputmax
-
-function EaseInOutQuad() {
+function EaseInOutQuad(argument0, argument1, argument2, argument3) {
 
 	argument0 /= argument3 * 0.5;
 
@@ -15,5 +14,10 @@ function EaseInOutQuad() {
 	}
 
 	return argument2 * -0.5 * (--argument0 * (argument0 - 2) - 1) + argument1;
+
+
+
+
+
 
 }

@@ -4,9 +4,8 @@
 /// @param outputmin
 /// @param outputmax
 /// @param inputmax
+function EaseFlicker1(argument0, argument1, argument2, argument3) {
 
-function EaseFlicker1() {
-
-	return ((e5(ease.on,ease.inOutBounce,ease.waveSaw,ease.waveSquare3,ease.outBounce,argument0,argument3,0.7,0.75,0.82,0.92,false,false,false,false)*(argument2-argument1))+argument1)
+	return ((ee5(ease.on,ease.inOutBounce,ease.waveSaw,ease.waveSquare3,ease.outBounce,argument0,argument3,0.7,0.75,0.82,0.92,false,false,false,false)*(argument2-argument1))+argument1)
 
 }

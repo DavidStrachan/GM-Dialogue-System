@@ -4,8 +4,8 @@
 /// @param outputmin
 /// @param outputmax
 /// @param inputmax
+function EaseWaveSquare3(argument0, argument1, argument2, argument3) {
 
-function EaseWaveSquare3() {
 
 	var easeReturn = (argument2 * (argument0*3) / argument3 + argument1) mod argument2;
 
@@ -14,5 +14,8 @@ function EaseWaveSquare3() {
 	} else {
 		return 0
 	}
+
+
+
 
 }

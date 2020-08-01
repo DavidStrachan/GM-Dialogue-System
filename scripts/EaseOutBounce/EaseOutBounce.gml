@@ -1,11 +1,10 @@
-/// @description  EaseOutBounce(inputvalue,outputmin,outputmax,inputmax)
-/// @function  EaseOutBounce
-/// @param inputvalue
+/// EaseOutBounce(inputvalue,outputmin,outputmax,inputmax)
+/// @function EaseOutBounce
+/// @param inputvalue 
 /// @param outputmin
 /// @param outputmax
 /// @param inputmax
-
-function EaseOutBounce() { 
+function EaseOutBounce(argument0, argument1, argument2, argument3) {
 
 	argument0 /= argument3;
 
@@ -31,5 +30,7 @@ function EaseOutBounce() {
 	    return argument2 * (7.5625 * argument0 * argument0 + 0.984375) + argument1;
 	}
 
-}
 
+
+
+}

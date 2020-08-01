@@ -4,8 +4,7 @@
 /// @param outputmin
 /// @param outputmax
 /// @param inputmax
-
-function EaseInOutCubic() {
+function EaseInOutCubic(argument0, argument1, argument2, argument3) {
 
 	argument0 /= argument3 * 0.5;
 
@@ -15,5 +14,9 @@ function EaseInOutCubic() {
 	}
 
 	return argument2 * 0.5 * (power(argument0 - 2, 3) + 2) + argument1;
+
+
+
+
 
 }

@@ -214,6 +214,8 @@ enum dd_effect { // These are all the built in effects that you can add to the t
 	sinewave_letter_scale_slow, // each letter moves up and down in a verticle sine wave 
 	
 	rotate_smooth, // each letter rotates by about 5 degrees back and forth 
+	rotate_letter_fixed, // each letter is slightly rotated and doesnt move 
+	rotate_letter_shake, // each letter is slightly rotated and vibrates horizontally and vertically (but rotation doesnt change)
 	popping, // each letter suddely gets bigger in scale and then slowly comes down (start on random amount) 
 	beat, // suddenly get bigger and then slowly go back to normal (like a music beat)
 	beatfast, // suddenly get bigger and then slowly go back to normal (like a music beat)
@@ -289,6 +291,8 @@ effect_letter_by_letter[dd_effect.sinewave_letter_h_slow] = true
 effect_letter_by_letter[dd_effect.sinewave_letter_v_slow] = true
 effect_letter_by_letter[dd_effect.sinewave_letter_scale_slow] = true
 effect_letter_by_letter[dd_effect.rotate_smooth] = true
+effect_letter_by_letter[dd_effect.rotate_letter_fixed] = true
+effect_letter_by_letter[dd_effect.rotate_letter_shake] = true
 effect_letter_by_letter[dd_effect.popping] = true
 effect_letter_by_letter[dd_effect.beat] = true
 effect_letter_by_letter[dd_effect.heart_beat_word] = false
@@ -788,7 +792,7 @@ var this_style = dd_style.neweffects1
 style_markup[this_style] = "neweffects1"
 style_font[this_style] = font_standard
 style_colour[this_style] = c_dkgray
-style_effect[this_style] = dd_effect.chromatic_aberration 
+style_effect[this_style] = dd_effect.rotate_letter_shake
 style_speed[this_style] = frames_per_character_standard
 
 var this_style = dd_style.neweffects2

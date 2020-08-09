@@ -316,6 +316,28 @@ function dd_draw_text(
 							effect_angle = sin(effects_data[i])*rotate_amount
 							effect_y = -2
 						break;
+						case dd_effect.rotate_letter_fixed:
+							// data step: 
+							if (effects_data[i] == 0) { 
+								effects_data[i] = random_range(-8,8)
+							}
+						
+							effect_angle = effects_data[i]
+							effect_y = -2
+						break;
+					    case dd_effect.rotate_letter_shake:
+						
+							// data step: 
+							if (effects_data[i] == 0) { 
+								effects_data[i] = random_range(-8,8)
+							}
+						
+							effect_angle = effects_data[i]
+						
+							var effect_wobble_size = 0.5 // this number is doubled because it goes in both directions 
+							effect_x = random_range(-effect_wobble_size,effect_wobble_size)
+							effect_y = random_range(-effect_wobble_size,effect_wobble_size) - 2
+						break;
 						case dd_effect.popping:
 							// data step: 
 							if (effects_data[i] == 0) {effects_data[i] = random(0.25)}

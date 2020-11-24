@@ -1,7 +1,6 @@
 {
   "bboxMode": 0,
   "collisionKind": 1,
-  "separateMasks": false,
   "type": 0,
   "origin": 9,
   "preMultiplyAlpha": false,
@@ -26,7 +25,7 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"9bf92bc4-ff5d-4a82-adaa-7a9a6de2fad0","path":"sprites/spr_test4/spr_test4.yy",},"LayerId":null,"resourceVersion":"1.0","name":null,"tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9bf92bc4-ff5d-4a82-adaa-7a9a6de2fad0","path":"sprites/spr_test4/spr_test4.yy",},"LayerId":{"name":"e3cd7409-9d17-4bc6-b0e6-efcc20f3a3bb","path":"sprites/spr_test4/spr_test4.yy",},"resourceVersion":"1.0","name":null,"tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"9bf92bc4-ff5d-4a82-adaa-7a9a6de2fad0","path":"sprites/spr_test4/spr_test4.yy",},"LayerId":{"name":"e3cd7409-9d17-4bc6-b0e6-efcc20f3a3bb","path":"sprites/spr_test4/spr_test4.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_test4","path":"sprites/spr_test4/spr_test4.yy",},"resourceVersion":"1.0","name":"9bf92bc4-ff5d-4a82-adaa-7a9a6de2fad0","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {

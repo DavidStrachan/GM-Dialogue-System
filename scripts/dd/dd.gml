@@ -765,6 +765,32 @@ if (i == 105) {
 							draw_set_colour(style_colour[current_draw_style])
 
 						break;
+						case dd_effect.intro_big_height_small_width:
+							if (effects_data[i] < 1) {
+								effects_data[i] += 0.03
+								if (effects_data[i] > 1) {
+									effects_data[i] = 1
+								}
+							}
+
+							effect_scale_x = effects_data[i]
+							effect_scale_y = 2-effect_scale_x
+						
+							draw_set_alpha(effects_data[i])
+						break;
+						case dd_effect.intro_big_width_small_height:
+							if (effects_data[i] < 1) {
+								effects_data[i] += 0.03
+								if (effects_data[i] > 1) {
+									effects_data[i] = 1
+								}
+							}
+
+							effect_scale_y = effects_data[i]
+							effect_scale_x = 2-effect_scale_y
+						
+							draw_set_alpha(effects_data[i])
+						break;
 						case dd_effect.intro_fadein_thendull_1s:
 							var fade_frames_in = 60
 							var fade_frames_out = 90

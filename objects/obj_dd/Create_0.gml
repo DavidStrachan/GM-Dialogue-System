@@ -242,6 +242,8 @@ enum dd_effect { // These are all the built in effects that you can add to the t
 	intro_sine_v, // sine wave that gets smaller and smaller
 	intro_wind_in, // go round in a circle before finding its place
 	intro_chromatic_aberration, // 
+	intro_big_height_small_width, // start with height=2 and width=0 and animate to 1/1
+	intro_big_width_small_height, // start with width=2 and height=0 and animate to 1/1
 	
 	// All these look best with style_speed = 0
 	block_1s, // block that all gets displayed at the same time and then waits for x seconds
@@ -315,6 +317,8 @@ effect_letter_by_letter[dd_effect.intro_wobble] = true
 effect_letter_by_letter[dd_effect.intro_sine_v] = true
 effect_letter_by_letter[dd_effect.intro_wind_in] = true
 effect_letter_by_letter[dd_effect.intro_chromatic_aberration] = true
+effect_letter_by_letter[dd_effect.intro_big_height_small_width] = true
+effect_letter_by_letter[dd_effect.intro_big_width_small_height] = true
 effect_letter_by_letter[dd_effect.block_1s] = false
 effect_letter_by_letter[dd_effect.block_2s] = false
 effect_letter_by_letter[dd_effect.block_3s] = false
@@ -792,7 +796,7 @@ var this_style = dd_style.neweffects1
 style_markup[this_style] = "neweffects1"
 style_font[this_style] = font_standard
 style_colour[this_style] = c_dkgray
-style_effect[this_style] = dd_effect.rotate_letter_shake
+style_effect[this_style] = dd_effect.intro_big_width_small_height
 style_speed[this_style] = frames_per_character_standard
 
 var this_style = dd_style.neweffects2

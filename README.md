@@ -19,8 +19,9 @@
 
 ![Dialogue System Style 4](http://www.davetech.co.uk/i/github_images/dialogue-style3.gif)
 
-A small example of some of the styles you can set the text to: 
+An example of some of the styles you can set the text to: 
 
-![Dialogue System Styles](http://www.davetech.co.uk/i/github_images/dialogue-styles.gif)
+![Dialogue System Styles](http://www.davetech.co.uk/i/github_images/dialogue_styles1.gif)
+![Dialogue System Styles](http://www.davetech.co.uk/i/github_images/dialogue_styles2.gif)
 
 ![Dialogue System Talking Back and Forth](http://www.davetech.co.uk/i/github_images/dialogue-talk-back-and-forth.gif)

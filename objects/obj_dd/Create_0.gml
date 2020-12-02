@@ -796,7 +796,7 @@ var this_style = dd_style.neweffects1
 style_markup[this_style] = "neweffects1"
 style_font[this_style] = font_standard
 style_colour[this_style] = c_dkgray
-style_effect[this_style] = dd_effect.intro_big_width_small_height
+style_effect[this_style] = dd_effect.intro_big_height_small_width
 style_speed[this_style] = frames_per_character_standard
 
 var this_style = dd_style.neweffects2

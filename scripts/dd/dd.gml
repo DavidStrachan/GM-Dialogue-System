@@ -787,7 +787,7 @@ if (i == 105) {
 							}
 
 							effect_scale_y = effects_data[i]
-							effect_scale_x = 2-effect_scale_y
+							effect_scale_x = 4-(effect_scale_y*3)
 						
 							draw_set_alpha(effects_data[i])
 						break;
